@@ -1,0 +1,678 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/DecisionTree/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Decision Tree - DATA MINING</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#decision-tree-pohon-keputusan" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="DATA MINING" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DATA MINING
+            </span>
+            <span class="md-header-nav__topic">
+              Decision Tree
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/yogadwiprasetya/170441100105" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    yogadwiprasetya/170441100105
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Pengantar" class="md-tabs__link md-tabs__link--active">
+        Pengantar
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="DATA MINING" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    DATA MINING
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/yogadwiprasetya/170441100105" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    yogadwiprasetya/170441100105
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Pengantar" class="md-nav__link">
+      Pengantar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../K-means/" title="K- Mean" class="md-nav__link">
+      K- Mean
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../KNN/" title="K-NN" class="md-nav__link">
+      K-NN
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Decision Tree
+      </label>
+    
+    <a href="./" title="Decision Tree" class="md-nav__link md-nav__link--active">
+      Decision Tree
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#konsep" title="Konsep" class="md-nav__link">
+    Konsep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritma-pohon-keputusan" title="Algoritma Pohon Keputusan" class="md-nav__link">
+    Algoritma Pohon Keputusan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi" title="Implementasi" class="md-nav__link">
+    Implementasi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#konsep" title="Konsep" class="md-nav__link">
+    Konsep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritma-pohon-keputusan" title="Algoritma Pohon Keputusan" class="md-nav__link">
+    Algoritma Pohon Keputusan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi" title="Implementasi" class="md-nav__link">
+    Implementasi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="decision-tree-pohon-keputusan">Decision Tree (Pohon Keputusan)<a class="headerlink" href="#decision-tree-pohon-keputusan" title="Permanent link">&para;</a></h1>
+<h2 id="konsep">Konsep<a class="headerlink" href="#konsep" title="Permanent link">&para;</a></h2>
+<p>Salah satu metode data mining yang umum digunakan adalah pohon keputusan. Metode pohon keputusan mengubah fakta yang sangat besar menjadi pohon  keputusan yang merepresentasikan rule. Pohon keputusan adalah salah satu metode klasifikasi yang paling popular karena mudah untuk  diinterpretasi oleh manusia. Konsep dari pohon keputusan adalah mengubah data menjadi pohon keputusan dan aturan-aturan keputusan.</p>
+<p><img alt="" src="../assets/images/konsep_pohon_keputusan.png" /></p>
+<p>Data dalam pohon keputusan biasanya dinyatakan dalam bentuk tabel dengan atribut dan record. Atribut menyatakan suatu parameter yang dibuat  sebagai kriteria dalam pembentukan tree</p>
+<p><img alt="" src="../assets/images/konsep_data_dalam_pohon_keputusan.png" /></p>
+<p>Proses pada pohon keputusan adalah mengubah bentuk data (tabel) menjadi model pohon, mengubah model pohon menjadi rule, dan menyederhanakan rule. Manfaat utama dari penggunaan pohon keputusan adalah kemampuannya untuk membreak down proses pengambilan keputusan yang kompleks menjadi lebih simpel sehingga pengambil keputusan akan lebih menginterpretasikan solusi dari permasalahan. Pohon Keputusan juga berguna untuk mengeksplorasi data, menemukan hubungan tersembunyi antara sejumlah calon variabel input dengan sebuah variabel target.</p>
+<p>Pohon keputusan merupakan himpunan aturan IF…THEN. Setiap path dalam tree dihubungkan dengan sebuah aturan, di mana premis terdiri atas sekumpulan node-node yang ditemui, dan kesimpulan dari aturam terdiri atas kelas yang terhubung dengan leaf dari path.</p>
+<p><img alt="" src="../assets/images/konsep_dasar_pohon_keputusan.png" /></p>
+<p>Bagian awal dari pohon keputusan ini adalah titik akar (root), sedangkan setiap cabang dari pohon keputusan merupakan pembagian berdasarkan hasil uji, dan titik akhir (leaf) merupakan pembagian kelas yang dihasilkan.</p>
+<p>Pohon keputusan mempunyai 3 tipe simpul yaitu:
+1. Simpul akar, dimana tidak memiliki cabang yang masuk dan memiliki cabang lebih dari satu, terkadang tidak memiliki cabang sama sekali. Simpul ini biasanya berupa atribut yang paling memiliki pengaruh terbesar pada suatu kelas tertentu.
+2. Simpul internal, dimana hanya memiliki 1 cabang yang masuk, dan memiliki lebih dari 1 cabang yang keluar.
+3. Simpul daun, atau simpul akhir dimana hanya memiliki 1 cabang yang masuk, dan tidak memiliki cabang sama sekali dan menandai bahwa simpul tersebut merupakan label kelas.</p>
+<p>Tahap awal dilakukan pengujian simpul akar, jika pada pengujian simpul akar menghasilkan sesuatu maka proses pengujian juga dilakukan pada setiap cabang berdasarkan hasil dari pengujian. Hal ini berlaku juga untuk simpul internal dimana suatu kondisi pengujian baru akan diterapkan pada simpul daun. Pada umumnya proses dari sistem pohon keputusan adalah mengadopsi strategi pencarian top-down untuk solusi ruang pencariannya. Pada proses mengklasifikasikan sampel yang tidak diketahui, nilai atribut akan diuji pada pohon keputusan dengan cara melacak jalur dari titik akar sampai titik akhir, kemudian akan diprediksikan kelas yang ditempati sampel baru tersebut.
+Pohon keputusan banyak digunakan dalam proses data mining karena memiliki beberapa kelebihan, yaitu:
+1. Tidak memerlukan biaya yang mahal saat membangun algoritma.
+2. Mudah untuk diinterpetasikan.
+3. Mudah mengintegrasikan dengan sistem basis data.
+4. Memiliki nilai ketelitian yang lebih baik.
+5. Dapat menemukan hubungan tak terduga dan suatu data.
+6. Dapat menggunakan data pasti/mutlak atau data kontinu.
+7. Mengakomodasi data yang hilang.</p>
+<h2 id="algoritma-pohon-keputusan">Algoritma Pohon Keputusan<a class="headerlink" href="#algoritma-pohon-keputusan" title="Permanent link">&para;</a></h2>
+<p>Salah satu algoritma induksi pohon keputusan yaitu ID3 (Iterative Dichotomiser 3). ID3 dikembangkan oleh J. Ross Quinlan. Dalam prosedur algoritma ID3, input berupa sampel training, label training dan atribut. Algoritma C4.5 merupakan pengembangan dari ID3. Sedangkan pada perangkat lunak open source WEKA mempunyai versi sendiri C4.5 yang dikenal sebagai J48.</p>
+<p><img alt="" src="../assets/images/image004.gif" /></p>
+<p>Pohon dibangun dengan cara membagi data secara rekursif hingga tiap bagian terdiri dari data yang berasal dari kelas yang sama. Bentuk pemecahan (split) yang digunakan untuk membagi data tergantung dari jenis atribut yang digunakan dalam split. Algoritma C4.5 dapat menangani data numerik (kontinyu) dan diskret. Split untuk atribut numerik yaitu mengurutkan contoh berdasarkan atribut kontiyu A, kemudian membentuk minimum permulaan (threshold) M dari contoh-contoh yang ada dari kelas mayoritas pada setiap partisi yang bersebelahan, lalu menggabungkan partisi-partisi yang bersebelahan tersebut dengan kelas mayoritas yang sama. Split untuk atribut diskret A mempunyai bentuk value (A) ε X dimana X ⊂ domain(A).</p>
+<p>Jika suatu set data mempunyai beberapa pengamatan dengan missing value yaitu record dengan beberapa nilai variabel tidak ada, Jika jumlah pengamatan terbatas maka atribut dengan missing value dapat diganti dengan nilai rata-rata dari variabel yang bersangkutan.[Santosa,2007]</p>
+<p>Untuk melakukan pemisahan obyek (split) dilakukan tes terhadap atribut dengan mengukur tingkat ketidakmurnian pada sebuah simpul (node). Pada algoritma C.45 menggunakan rasio perolehan (gain ratio). Sebelum menghitung rasio perolehan, perlu menghitung dulu nilai informasi dalam satuan bits dari suatu kumpulan objek. Cara menghitungnya dilakukan dengan menggunakan konsep entropi.</p>
+<p><img alt="" src="../assets/images/image006.gif" /></p>
+<p>S adalah ruang (data) sampel yang digunakan untuk pelatihan, p+ adalah jumlah yang bersolusi positif atau mendukung pada data sampel untuk kriteria tertentu dan p- adalah jumlah yang bersolusi negatif atau tidak mendukung pada data sampel untuk kriteria tertentu. ntropi(S) sama dengan 0, jika semua contoh pada S berada dalam kelas yang sama. Entropi(S) sama dengan 1, jika jumlah contoh positif dan negative dalam S adalah sama. Entropi(S) lebih dari 0 tetapi kurang dari 1, jika jumlah contoh positif dan negative dalam S tidak sama [Mitchell,1997].Entropi split yang membagi S dengan n record menjadi himpunan-himpunan S1 dengan n1 baris dan S2 dengan n2 baris adalah :</p>
+<p><img alt="" src="../assets/images/image008.gif" /></p>
+<p>Kemudian menghitung perolehan informasi dari output data atau variabel dependent y yang dikelompokkan berdasarkan atribut A, dinotasikan dengan gain (y,A). Perolehan informasi, gain (y,A), dari atribut A relative terhadap output data y adalah:</p>
+<p><img alt="" src="../assets/images/image010.gif" /></p>
+<p>nilai (A) adalah semua nilai yang mungkin dari atribut A, dan yc adalah subset dari y dimana A mempunyai nilai c. Term pertama dalam persamaan diatas adalah entropy total y dan term kedua adalah entropy sesudah dilakukan pemisahan data berdasarkan atribut A.</p>
+<p>Untuk menghitung rasio perolehan perlu diketahui suatu term baru yang disebut pemisahan informasi (SplitInfo). Pemisahan informasi dihitung dengan cara :</p>
+<p><img alt="" src="../assets/images/image012.gif" /></p>
+<p>bahwa S1 sampai Sc adalah c subset yang dihasilkan dari pemecahan S dengan menggunakan atribut A yang mempunyai sebanyak c nilai. Selanjutnya rasio perolehan (gain ratio) dihitung dengan cara :</p>
+<p><img alt="" src="../assets/images/image014.gif" /></p>
+<h2 id="implementasi">Implementasi<a class="headerlink" href="#implementasi" title="Permanent link">&para;</a></h2>
+<p>studi kasus kali ini, saya akan menggunakan dataset user modeling. dataset ini memiliki 6 kolom dan memiliki 3 klasifikasi kelas. berikut merupakan data yang saya gunakan <a href="https://drive.google.com/open?id=1aLhru6M_PmOHu0JhH1F18Dxtil3BaY_k">disini</a></p>
+<p>langsung ke programnya :</p>
+<div class="codehilite"><pre><span></span>import pandas as pd 
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import model_selection
+from sklearn import metrics
+from sklearn.model_selection import train_test_split
+from sklearn.tree import export_graphviz
+from sklearn.externals.six import StringIO   
+import pydotplus
+from IPython.display import Image
+</pre></div>
+
+<p>kemudian membaca file csv nya</p>
+<div class="codehilite"><pre><span></span>df=pd.read_csv(&#39;data.csv&#39;)
+</pre></div>
+
+<p>menampilkan datanya :</p>
+<div class="codehilite"><pre><span></span>print(&quot;Informasi Data\n&quot;)
+print(&quot;Jumlah Data : &quot;, len(df))
+print (&quot;Dimensi Data : &quot;,df.shape)
+print (&quot;Dataset :&quot;)
+print(df.head())
+print(&#39;\n&#39;)
+</pre></div>
+
+<p><img alt="" src="../assets/images/1.JPG" /></p>
+<p>10 baris pertama :</p>
+<div class="codehilite"><pre><span></span>df.head(10)
+</pre></div>
+
+<p><img alt="" src="../assets/images/2.JPG" /></p>
+<p>splitting dataset ke training dan testing</p>
+<div class="codehilite"><pre><span></span>train, test = train_test_split(df, test_size = 0.1,random_state=1234)
+#mencari hasil
+print(train.shape)
+print(test.shape)
+</pre></div>
+
+<p><img alt="" src="../assets/images/3.JPG" /></p>
+<div class="codehilite"><pre><span></span># Dataset validasi dataset
+array = df.values
+X = array[:,1:5]
+Y = array[:,5]
+
+# Sepertiga data sebagai bagian dari set tes
+validation_size = 15
+
+seed = 7
+X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=validation_size, random_state=seed)
+</pre></div>
+
+<p>mencari Hasil :</p>
+<div class="codehilite"><pre><span></span>print(X_train.shape)
+print(Y_train.shape)
+print(X_validation.shape)
+print(Y_validation.shape)
+</pre></div>
+
+<p><img alt="" src="../assets/images/4.JPG" /></p>
+<div class="codehilite"><pre><span></span>entropy= DecisionTreeClassifier(criterion=&quot;entropy&quot;,random_state=1234)
+#learning
+entropy.fit(X_train,Y_train)
+#Prediksi
+prediction=entropy.predict(X_validation)
+#mengevaluasi(Accuracy)
+print(&quot;Accuracy:&quot;,metrics.accuracy_score(prediction,Y_validation))
+#evaluation(Confusion Metrix)
+print(&quot;Confusion Metrix:\n&quot;,metrics.confusion_matrix(prediction,Y_validation))
+</pre></div>
+
+<p><img alt="" src="../assets/images/5.JPG" /></p>
+<div class="codehilite"><pre><span></span>feature_cols=[&#39;SCG&#39;,&#39;STR&#39;  ,&#39;LPR&#39; , &#39;PEG&#39;]
+dot_data = StringIO()
+export_graphviz(entropy, out_file=dot_data,  
+                filled=True, rounded=True,
+                special_characters=True,feature_names = feature_cols,class_names=[&#39;very_low&#39;,&#39;high&#39;,&#39;low&#39;,&#39;middle&#39;])
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
+graph.write_png(&#39;entropy.png&#39;)
+Image(graph.create_png())
+</pre></div>
+
+<p><img alt="" src="../assets/images/6.JPG" /></p>
+<div class="codehilite"><pre><span></span>print(&quot;Hasil prediksi menngunakan entropy&quot;)
+#Membentuk kembali diperlukan untuk melakukan penggabungan
+pred_clf_df = pd.DataFrame(prediction.reshape(15,1))
+
+#Ganti nama kolom untuk menunjukkan prediksi
+pred_clf_df.rename(columns={0:&#39;Prediction&#39;}, inplace=True)
+
+#membentuk kembali dataset uji
+X_validation_df = pd.DataFrame(X_validation.reshape(15 ,4))
+
+#menggabungkan dua bingkai data panda di atas kolom untuk membuat dataset prediksi
+pred_outcome = pd.concat([X_validation_df, pred_clf_df], axis=1, join_axes=[X_validation_df.index])
+
+pred_outcome.rename(columns = {0:&#39;STG&#39;,1:&#39;SCG&#39;,2:&#39;STR&#39;  ,3:&#39;LPR&#39; ,4: &#39;PEG&#39;}, inplace=True)
+
+
+
+#cetak 10 baris prediksi akhir
+print((pred_outcome).head(15))
+print (&quot;\n&quot;)
+#mengevaluasi(Accuracy)
+print(&quot;Accuracy:&quot;,metrics.accuracy_score(prediction,Y_validation))
+</pre></div>
+
+<p><img alt="" src="../assets/images/7.JPG" /></p>
+<p>Referensi :</p>
+<p><a href="https://medium.com/@mimubarok.mim/decision-tree-pohon-keputusan-6484ad30c289">https://medium.com/@mimubarok.mim/decision-tree-pohon-keputusan-6484ad30c289</a></p>
+<p><a href="https://sharingaddicted.com/pengambilan-keputusan-menggunakan-pohon-keputusan/">https://sharingaddicted.com/pengambilan-keputusan-menggunakan-pohon-keputusan/</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../KNN/" title="K-NN" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                K-NN
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2019 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.8c0d971c.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
